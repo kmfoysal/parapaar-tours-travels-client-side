@@ -1,0 +1,29 @@
+.hero-banner {
+  position: relative;
+  background-image: url(../../../images/home-banner.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 600px;
+  z-index: 2;
+}
+
+.hero-banner::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(29, 38, 51, 0.75);
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+.hero-banner h2 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  margin-bottom: 30px;
+}
