@@ -11,8 +11,8 @@ const Header = () => {
         <div>
             <Navbar bg="warning" expand="lg">
                 <Container>
-                <NavLink to='/'>
-                <Navbar.Brand href="#home">Parapaar Tours & Travels</Navbar.Brand>
+                <NavLink className='text-decoration-none' to='/'>
+                <Navbar.Brand href="#home" className='text-uppercase'>Parapaar Tours & Travels</Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -20,12 +20,6 @@ const Header = () => {
                     <li className="nav-item">
                     <NavLink className="nav-link me-2" aria-current="page" to="/home">Home</NavLink>
                     </li>
-                    {/* <li className="nav-item">
-                    <NavLink className="nav-link" aria-current="page" to="/about">About</NavLink>
-                    </li>
-                    <li className="nav-item">
-                    <NavLink className="nav-link mr-2" aria-current="page" to="/contact">Contact</NavLink>
-                    </li> */}
 
                     {user.email ? 
                        <div className="private-link">
