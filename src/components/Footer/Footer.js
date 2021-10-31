@@ -40,7 +40,7 @@ const Footer = () => {
                 </Col>
             </Row>
         </Container>
-        <div className='container py-3 bg-warning'>
+        <div className='container-fluid py-3 bg-warning'>
             <p className='m-0 text-dark'>Parapaar Tours & Travels &copy; 2021 | Developed By <strong>K.M FOYSAL</strong> </p>
         </div>
     </div>
