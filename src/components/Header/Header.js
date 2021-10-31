@@ -9,7 +9,7 @@ import './Header.css';
 const Header = () => {
     const {user,logOut} = useAuth()
 
-    const activeLink = {fontWeight:'500', color:'#ffffff', textTransform:'uppercase'}
+    const activeLink = {fontWeight:'500', color:'#ffffff'}
 
     const login = <FontAwesomeIcon icon={faSignInAlt} />
     const logout = <FontAwesomeIcon icon={faSignOutAlt} />
@@ -27,6 +27,9 @@ const Header = () => {
                 <ul className="navbar-nav items-center ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                     <NavLink className="nav-link me-2" aria-current="page" to="/home" activeStyle={activeLink}>Home</NavLink>
+                    </li>
+                    <li className="nav-item">
+                    <NavLink className="nav-link me-2" aria-current="page" to="/contact" activeStyle={activeLink}>Contact</NavLink>
                     </li>
 
                     {user.email ? 
