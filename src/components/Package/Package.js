@@ -5,7 +5,7 @@ const Package = (props) => {
     const {id, name, price, imgUrl, description} = props.singlePackage;
     return (
         <div className='container'>
-            <div className="card mb-3">
+            <div className="card mb-3 shadow-lg">
                 <div className="row g-0">
                     <div className="col-xl-6 col-lg-5 col-md-4">
                     <img src={imgUrl} className="img-fluid rounded-start" alt="img" style={{height:'100%'}}/>
@@ -16,7 +16,7 @@ const Package = (props) => {
                         <p className="card-text">{description}</p>
                         <h6 className="card-title mb-3">Package Start From ${price}</h6>
                         <Link to={`/packageBooking/${id}`}>
-                        <button className='btn btn-warning'>Book Now</button>
+                        <button className='btn btn-warning w-100'>Book Now</button>
                         </Link>
                     </div>
                     </div>

@@ -2,13 +2,14 @@ import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
     const {user,logOut} = useAuth()
 
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="warning" expand="lg">
                 <Container>
                 <NavLink to='/'>
                 <Navbar.Brand href="#home">Parapaar Tours & Travels</Navbar.Brand>
@@ -17,24 +18,35 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <ul className="navbar-nav items-center ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
+                    <NavLink className="nav-link me-2" aria-current="page" to="/home">Home</NavLink>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                     <NavLink className="nav-link" aria-current="page" to="/about">About</NavLink>
                     </li>
                     <li className="nav-item">
                     <NavLink className="nav-link mr-2" aria-current="page" to="/contact">Contact</NavLink>
-                    </li>
+                    </li> */}
 
                     {user.email ? 
-                       <li className="d-flex items-center">
-                           <img src={user.photoURL} alt="img"  className='mr-2'/>
-                       <p className=" mr-2 text-success font-semibold">{user.displayName}</p>
-                       <button onClick={logOut} className='py-2 px-3'>Logout</button>
-                       </li>
+                       <div className="private-link">
+                            <li className="nav-item">
+                            <NavLink className="nav-link me-2" aria-current="page" to="/myBookings">My Bookings</NavLink>
+                            </li>
+                            <li className="nav-item">
+                            <NavLink className="nav-link me-2" aria-current="page" to="/manageAllBookings">Manage All Bookings</NavLink>
+                            </li>
+                            <li className="nav-item">
+                            <NavLink className="nav-link me-2" aria-current="page" to="/addPackage">Add Package</NavLink>
+                            </li>
+                            <li className="d-flex items-center">
+                                <img src={user.photoURL} alt="img"  className='rounded-circle me-2' style={{height:'40px', width:'40px'}}/>
+                                <p className="mb-0 me-2 text-success font-semibold">{user.displayName}</p>
+                                <button onClick={logOut} className='btn btn-danger'>Logout</button>
+                            </li>
+                       </div>
                        :
                        <li className="nav-item">
-                        <NavLink className="" to="/login"><button className='py-2 px-3'>Login/Signup</button></NavLink>
+                        <NavLink className="" to="/login"><button className='btn btn-warning'>Login</button></NavLink>
                        </li>
                     }              
                 </ul>

@@ -1,0 +1,57 @@
+.discover {
+  padding-right: 30px;
+}
+
+.discover h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.discover h5 {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.discover hr {
+  height: 4px;
+  width: 200px;
+  background-color: orangered;
+  margin-bottom: 50px;
+  opacity: 1;
+}
+
+.discover p {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .discover h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .discover {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .discover h5 {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .discover hr {
+    margin: auto;
+  }
+
+  .discover p {
+    margin-top: 20px;
+  }
+}

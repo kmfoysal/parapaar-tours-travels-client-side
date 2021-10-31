@@ -5,7 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  height: 600px;
+  height: 100vh;
   z-index: 2;
 }
 
@@ -22,8 +22,21 @@
 }
 
 .hero-banner h2 {
-  font-size: 60px;
+  font-size: 65px;
   font-weight: bolder;
   color: #fff;
   margin-bottom: 30px;
+}
+
+@media (max-width: 575.98px) {
+  .hero-banner {
+    text-align: center;
+  }
+  .hero-banner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .hero-banner p {
+    width: 100% !important;
+  }
 }

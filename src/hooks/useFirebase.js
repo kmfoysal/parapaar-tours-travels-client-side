@@ -8,19 +8,21 @@ const useFirebase = () =>{
 
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const googleProvider = new GoogleAuthProvider()
     const auth = getAuth()
 
     const signInWithGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            console.log(result.user);
-            setUser(result.user);
-        })
-        .catch(error =>{
-            setError(error.message);
-        })
+        return signInWithPopup(auth, googleProvider)
+        // .then(result =>{
+        //     console.log(result.user);
+        //     setUser(result.user);
+        // })
+        // .catch(error =>{
+        //     setError(error.message);
+        // })
+        
         }
 
         const logOut = ()=>{
@@ -39,10 +41,14 @@ const useFirebase = () =>{
                     if(user){
                         setUser(user);
                     }
+                    else{
+                        setUser({});
+                    }
+                    setLoading(false);
                 })
             },[])
 
-    return {user, error, signInWithGoogle, logOut }
+    return {user, error, signInWithGoogle, logOut, loading }
 
 }
 

@@ -5,7 +5,7 @@ const usePackages = () =>{
     const [packages, setPackages] = useState([])
 
     useEffect(()=>{
-        fetch('/data.json')
+        fetch('https://grim-labyrinth-64998.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
     },[])

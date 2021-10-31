@@ -1,0 +1,13 @@
+.booking-form {
+  width: 70%;
+  padding: 20px 30px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .booking-form {
+    width: 100%;
+    padding: 10px;
+  }
+}

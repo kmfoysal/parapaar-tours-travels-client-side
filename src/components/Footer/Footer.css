@@ -1,0 +1,14 @@
+.social-icon a {
+  border: 2px solid orange;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  color: orange;
+}
+
+.social-icon a:hover {
+  background-color: orange;
+  color: #000;
+  transition: linear 0.4s;
+}

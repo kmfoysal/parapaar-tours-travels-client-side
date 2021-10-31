@@ -1,0 +1,9 @@
+.private-link {
+  display: flex;
+}
+
+@media (max-width: 575.98px) {
+  .private-link {
+    flex-direction: column;
+  }
+}
