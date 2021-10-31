@@ -1,5 +1,4 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
@@ -9,7 +8,11 @@ const PrivateRoute = ({children, ...rest}) => {
     
     if (loading){
         return(
-            <Spinner animation="grow" variant="warning" />
+            <div class="text-center">
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
         ) 
     }
 

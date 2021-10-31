@@ -14,7 +14,11 @@ const Packages = () => {
                 }
             </div>
             :
-            'Loading'
+            <div class="text-center">
+                <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
             }
         </div>
     );

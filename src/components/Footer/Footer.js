@@ -18,7 +18,6 @@ const Footer = () => {
                 <Col>
                     <h3 className='text-white mb-3'>Follow Us On</h3>
                     <img src={divider} alt="divider" />
-                    {/* <p className='text-white p-3'>You can follow us on social media and get regular update promotion.</p> */}
                     <div className='social-icon d-flex justify-content-center align-items-center gap-4 mt-4'>
                         <a href="#" className='text-decoration-none'>{faceBook}</a>
                         <a href="#" className='text-decoration-none'>{insta}</a>

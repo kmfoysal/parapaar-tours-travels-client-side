@@ -4,6 +4,7 @@ import './Discount.css';
 const Discount = () => {
     return (
         <div className='discount my-5'>
+            <div className="container">
             <div className="row">
                 <div className="col-12">
                     <h4>EXCLUSIVE OFFER</h4>
@@ -12,6 +13,7 @@ const Discount = () => {
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <button className='btn btn-lg btn-outline-light px-5 py-3'>VIEW PACKAGES</button>
                 </div>
+            </div>
             </div>
         </div>
     );
