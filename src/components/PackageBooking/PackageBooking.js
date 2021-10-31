@@ -30,7 +30,7 @@ const PackageBooking = () => {
 
         const newBooking = {name, email, person, packages, address, phone, date}
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://grim-labyrinth-64998.herokuapp.com/bookings', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
